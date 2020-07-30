@@ -13,4 +13,15 @@ function calc (a,b ,times){
     console.log(arr);
     return arr
 }
-calc( 1, 1, 100)
+  calc( 1, 1, 10)
+
+// Here is the solution by recursion: 
+
+function calcWithRecursion (a, b, times){
+    if (times > 0){        
+        console.log(a);
+        calcWithRecursion(b,a+b, times-1);
+    }    
+}
+
+calcWithRecursion(1, 1, 10);
